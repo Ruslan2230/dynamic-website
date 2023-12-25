@@ -1,0 +1,10 @@
+mutation CreatePage($pageDetails: PageDetailsInput!) {
+    createPage(pageDetails: $pageDetails) {
+        id
+        title
+        layout {
+            headerStyle
+            footerStyle
+        }
+    }
+}

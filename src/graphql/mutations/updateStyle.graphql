@@ -1,0 +1,9 @@
+mutation UpdateStyle($style: StyleInput!) {
+    updateStyle(style: $style) {
+        id
+        backgroundColor
+        color
+#        primaryFont
+#        secondaryFont
+    }
+}

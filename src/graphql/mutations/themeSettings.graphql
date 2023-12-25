@@ -1,0 +1,41 @@
+type Mutation {
+  updateStyle(style: StyleInput!): StyleOutput
+  createPage(pageDetails: PageDetailsInput!): Page
+}
+
+input StyleInput {
+  id: ID
+  backgroundColor: String
+  color: String
+}
+
+type StyleOutput {
+  id: ID
+  backgroundColor: String
+  color: String
+}
+
+input LayoutInput {
+  headerStyle: String
+  footerStyle: String
+}
+
+input PageDetailsInput {
+  title: String
+  layout: LayoutInput
+}
+
+type Page {
+  id: ID
+  title: String
+  layout: Layout
+}
+
+type Layout {
+  headerStyle: String
+  footerStyle: String
+}
+
+type Query {
+  getPageById(id: ID!): Page
+}
